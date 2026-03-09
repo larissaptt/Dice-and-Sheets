@@ -1,0 +1,133 @@
+body{
+  background-color: #090B0F;
+  color: #dae1f1;
+
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perfil{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info_gerais{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.hex {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex::before{
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(37,129,196,0.8) 50%,
+    rgba(37,129,196,0.4) 60%,
+    rgba(37,129,196,0) 70%
+  );
+
+  filter: blur(20px);
+  z-index: 0;
+}
+.classes_niveis{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.classe{
+  display: flex;
+  gap: 6px;
+}
+
+.hex img{
+  width: 180px;
+  aspect-ratio: 1;
+  object-fit: cover;
+
+  clip-path: polygon(
+    25% 5%,
+    75% 5%,
+    100% 50%,
+    80% 95%,
+    25% 95%,
+    0% 50%
+  );
+
+  position: relative;
+  z-index: 1;
+}
+.barras, .statics{
+  width: 100%;
+}
+.info.vida, .info.hp{
+  margin-top: 10%;
+}
+.barra_vida, .barra_hp{
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.barra_vida{
+  background-color: #990101;
+  border: 2px solid rgb(80, 0, 0);
+}
+.barra_hp{
+  background-color: #314575;
+  border: 2px solid #182235;
+}
+p{
+  font-size: 120%;
+}
+.statics{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.elemento{
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.statics .fundo{
+  width: 125px;
+  height: 50px;
+  border-radius: 40px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.statics p{
+  font-size: 115%;
+}
+.fundo{
+  background-color: #212e4e;
+  border: 1px solid #96b3df;
+}
