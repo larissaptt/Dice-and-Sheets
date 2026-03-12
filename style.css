@@ -2,16 +2,20 @@ body{
   background-color: #090B0F;
   color: #dae1f1;
 
-  margin: 0;
-  min-height: 100vh;
+  margin-left: 5%;
+  margin-right: 5%;
+  min-height: 80vh;
+  gap: 5px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
-.perfil{
-  max-width: 400px;
-  width: 25%;
+.perfil, .aba1, .aba3{
+  width: 100%;
+  max-width: 450px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,12 +56,12 @@ body{
 .classes_niveis{
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .classe{
   display: flex;
-  gap: 6px;
+  gap: 5px;
 }
 
 .hex img{
@@ -129,8 +133,70 @@ p{
 .statics p{
   font-size: 115%;
 }
-.fundo{
+.fundo{ /*Fundo das coisinhas de armor class e tals*/
   background-color: #212e4e;
   border: 1px solid #96b3df;
 }
+.mod_habilidade{
+  width: 100%;
+}
+.mod_habilidade .cabecalho{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #314575;
+  font-size: 20px;
+}
+table{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: separate;
+  border-spacing: 15px;
+  font-size: 14px;
+}
+td:not(.pol){
+  border: 2px solid #212e4e;
+  width: 100px;
+  height: 30px;
+}
+th .info{
+  height: 12px;
+  font-size: 9px;
+  margin-top: -20px;
+}
+td .info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+.pol{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
+  width: 70px;
+  height: 30px;
+
+  color: #cfe3ff;
+  background: #212e4e;
+
+  clip-path: polygon(
+    15% 0%,
+    85% 0%,
+    100% 50%,
+    85% 100%,
+    15% 100%,
+    0% 50%
+  );
+}
+.aba1{
+  height: 100%;
+  margin-top: 0;
+  background-color: #091929;
+  border-right: 4px solid #314575;
+  border-left: 4px solid #314575;
+}

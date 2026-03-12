@@ -4,9 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>DnD</title>
+    <title>Dice & Sheets</title>
 </head>
 <body>
+    <div class="aba1">
+        <div class="mod_habilidade">
+            <div class="cabecalho">
+                <h3>Mod. Habilidades</h3>
+            </div>
+        </div>
+        <div class="atributos">
+            <table>
+                <tr style="height: 10px;" class="cabecalho">
+                    <th style="width: 20%;">
+                        <div class="info">
+                            <p>Score</p>
+                        </div>
+                    </th>
+                    <th style="width: 50%;">
+                        <div class="info">
+                            <p>habilidade</p>
+                        </div>
+                    </th>
+                    <th style="width: 15%;">
+                        <div class="info">
+                            <p>mod. Habil.</p>
+                        </div>
+                    </th>
+                    <th style="width: 15%;">
+                        <div class="info">
+                            <p>salva guarda</p>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="forca">
+                    <td class="pol">
+                        <p class="score_for">15</p>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p>Força</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="info">
+                            <p class="abil_mod_forca">+2</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p class="save_throw_forca">+2</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                </tr>
+                <tr class="destreza">
+                    <td class="pol">
+                        <p class="score_dex">21</p>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p>Destreza</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="info">
+                            <p class="abil_mod_dex">+5</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p class="save_throw_dex">+5</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                </tr>
+                <tr class="constituição">
+                    <td class="pol">
+                        <p class="score_const">18</p>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p>Constituição</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="info">
+                            <p class="abil_mod_const">+4</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p class="save_throw_const">+4</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                </tr>
+                <tr class="inteligencia">
+                    <td class="pol">
+                        <p class="score_int">20</p>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p>Inteligência</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="info">
+                            <p class="abil_mod_int">+5</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p class="save_throw_int">+8</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                </tr>
+                <tr class="sabedoria">
+                    <td class="pol">
+                        <p class="score_sab">18</p>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p>Sabedoria</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="info">
+                            <p class="abil_mod_sab">+4</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p class="save_throw_sab">+7</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                </tr>
+                <tr class="carisma">
+                    <td class="pol">
+                        <p class="score_car">20</p>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p>Carisma</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="info">
+                            <p class="abil_mod_car">+5</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                    <td>
+                        <div class="info">
+                            <p class="save_throw_car">+5</p>
+                        </div>
+                    </td> <!--aqui vem BD e JS-->
+                </tr>
+                
+            </table>
+        </div>
+        </div>
+    <div class="linha"></div>
+    </div>
     <div class="perfil">
         <h1 class="nome_personagem">Heartman</h1>
         <div class="info_gerais">
@@ -29,7 +185,7 @@
             <div class="info.vida">
                 <p>HP</p>
                 <div class="barra_vida">
-                    <div class="vida"><p>70/70</p></div>
+                    <div class="vida"><p>75/75</p></div>
                 </div>
             </div>
             <div class="info.hp">
@@ -44,7 +200,7 @@
                 <div class="armadura">
                     <p>Armor Class</p>
                     <div class="fundo">
-                        <p>17</p>
+                        <p>15</p>
                     </div>
                 </div>
             </div>
@@ -68,7 +224,7 @@
                 <div class="percepção">
                     <p>Per. passiva</p>
                     <div class="fundo">
-                        <p>19</p>
+                        <p>14</p>
                     </div>
                 </div>
             </div>
@@ -76,7 +232,7 @@
                 <div class="proeficiência">
                     <p>Proeficiência</p>
                     <div class="fundo">
-                        <p>+4</p>
+                        <p>+3</p>
                     </div>
                 </div>
             </div>
@@ -89,6 +245,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="aba3">
+
     </div>
 </body>
 </html>
