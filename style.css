@@ -117,6 +117,7 @@ p{
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 3%;
 }
 .statics .fundo{
   width: 125px;
@@ -129,7 +130,7 @@ p{
   text-align: center;
 }
 .statics p{
-  font-size: 115%;
+  font-size: 100%;
 }
 .fundo{ /*Fundo das coisinhas de armor class e tals*/
   background-color: #212e4e;
@@ -212,7 +213,7 @@ button:not(.button_aba3){
 .button_aba3:active{
   background-color: #091929;
 }
-button button:active{
+.aba1 button:active{
   background-color: #314575;
 }
 .atributos td img{
