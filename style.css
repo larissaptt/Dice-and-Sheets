@@ -7,9 +7,9 @@ body{
   gap: 5px;
 
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .perfil, .aba1, .aba3{
   width: 100%;
@@ -17,8 +17,9 @@ body{
   min-width: 300px;
   display: flex;
   flex-direction: column;
+}
+.perfil{
   align-items: center;
-  justify-content: center;
 }
 .info_gerais{
   display: flex;
@@ -34,7 +35,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
 .hex::before{
   content: "";
   position: absolute;
@@ -57,12 +57,10 @@ body{
   flex-direction: column;
   gap: 3px;
 }
-
 .classe{
   display: flex;
   gap: 5px;
 }
-
 .hex img{
   width: 180px;
   aspect-ratio: 1;
@@ -140,12 +138,14 @@ p{
 .aba1 .titulo{
   width: 100%;
 }
-.aba1 .titulo .cabecalho{
-  height: 50px;
-  width: 100%;
+.aba1 .cabecalho{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.aba1 .cabecalho, .aba3 .cabecalho{
+  height: 50px;
+  width: 100%;
   background-color: #314575;
   font-size: 20px;
 }
@@ -200,10 +200,19 @@ th .info{
 button{
   width: 100%;
   height: 100%;
-  background-color: #091929;
   border: none;
+  color: white;
 }
-button:active{
+button:not(.button_aba3){
+  background-color: #091929;
+}
+.button_aba3{
+  background-color: #314575;
+}
+.button_aba3:active{
+  background-color: #091929;
+}
+button button:active{
   background-color: #314575;
 }
 .atributos td img{
@@ -212,4 +221,9 @@ button:active{
 td img{
   height: 20px;
   width: 20px;
+}
+.aba3 .cabecalho{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
