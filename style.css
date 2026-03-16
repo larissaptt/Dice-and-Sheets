@@ -14,7 +14,7 @@ body{
 .perfil, .aba1, .aba3{
   width: 100%;
   max-width: 450px;
-  min-width: 300px;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
 }
