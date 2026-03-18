@@ -117,9 +117,6 @@ body{
   background-color: #314575;
   border: 2px solid #182235;
 }
-p{
-  font-size: 1.1rem;
-}
 .statics{
   display: flex;
   flex-wrap: wrap;
@@ -169,7 +166,7 @@ p{
 table{
   border-collapse: separate;
   border-spacing: 10px;
-  font-size: 14px;
+  font-size: 1rem;
   width: 100%;
   table-layout: fixed;
 }
@@ -186,7 +183,7 @@ td .info, th .info{
 }
 th .info{
   height: 15px;
-  font-size: 9px;
+  font-size: 0.8rem;
 }
 .pol{
   display: inline-flex;
