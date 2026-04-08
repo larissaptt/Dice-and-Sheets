@@ -225,7 +225,7 @@ header{
   font-size: 20px;
   border-radius: 10px;
 }
-table{
+table:not(.junto){
   border-collapse: separate;
   border-spacing: 10px;
   font-size: 1rem;
@@ -303,13 +303,35 @@ td img{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.head, .junto{
+  display: flex;
+  align-items: center;
+  gap: 6px;
   width: 100%;
 }
 .head{
+  justify-content: center;
+}
+.junto{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
+  justify-content: space-around; 
+  font-size: 1rem;
+  height: 30px;
+
+}
+.junto, .junto th, .junto td {
+  border: 0px solid red;
+
+}
+.junto .th, .junto td:not(.espaco){
+  text-align: center;
+  background-color: #212e4e;
+}
+.espaco{
+  width: 40%;
 }
 .inventario img{
   transform: rotate(45deg);
