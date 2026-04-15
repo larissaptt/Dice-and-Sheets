@@ -621,12 +621,12 @@
     <div class="aba3">
         <div class="titulo">
             <div class="cabecalho">
-                <button class="button_aba3">Inventário</button>
-                <button  class="button_aba3">Feitiços</button>
-                <button  class="button_aba3">Habilidades</button>
+                <button class="button_aba3" onclick="trocarAba('inventario')">Inventário</button>
+                <button class="button_aba3" onclick="trocarAba('feiticos')">Feitiços</button>
+                <button class="button_aba3" onclick="trocarAba('habilidades')">Habilidades</button>
             </div>
         </div>
-        <div class="inventario" id="inventario">
+        <div id="inventario" class="aba">
             <div class="head">
                 <img src="imagens/quadrado.png" alt="">
                 <h1>Inventário</h1>
@@ -637,7 +637,7 @@
                     <td class="lado">
                         <div class="info">
                             <p>Capacidade de peso</p><br>
-                            <span>225lbs</span>
+                            <p>225lbs</p>
                         </div>
                     </td>
                     
@@ -646,13 +646,59 @@
                     <td class="lado">
                         <div class="info">
                             <p>Carregando</p><br>
-                            <span>19lbs</span>
+                            <p>19lbs</p>
                         </div>
                     </td>
                 </tr>
             </table>
+            <div class="inv_carregando">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 20%;">
+                            <div class="info">
+                                Equipar
+                            </div>
+                        </td>
+                        <td class="" style="width: 60%;">  
+                            <div class="info">
+                                Nome
+                            </div>
+                        </td>
+                        <td style="width: 20%;">
+                            <div class="info">
+                                Qnt
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="info">
+                                <input type="checkbox" class="check">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info">
+                                <button>Ouro</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info">
+                                139
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>
+<script>
+function trocarAba(id){
+    document.querySelectorAll('.aba').forEach(aba => {
+      aba.classList.remove('ativa');
+    });
+  
+    document.getElementById(id).classList.add('ativa');
+  }</script>
 </body>
 </html>

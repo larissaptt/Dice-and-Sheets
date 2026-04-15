@@ -232,7 +232,7 @@ table:not(.junto){
   width: 100%;
   table-layout: fixed;
 }
-td:not(.pol){
+td:not(.pol, .espaco){
   border: 2px solid #212e4e;
   height: 30px;
 }
@@ -272,6 +272,9 @@ th .info{
   background-color: #091929;
   border: 3px solid #314575;
 }
+.tabs input{
+  display: none;
+}
 button{
   width: 100%;
   height: 100%;
@@ -291,6 +294,13 @@ button:not(.button_aba3){
 .aba1 button:active{
   background-color: #314575;
 }
+
+/* aba ativa */
+#inv:checked ~ .cabecalho label[for="inv"],
+#feit:checked ~ .cabecalho label[for="feit"],
+#hab:checked ~ .cabecalho label[for="hab"]{
+  background-color: #091929;
+}
 td img{
   height: 20px;
   width: 20px;
@@ -299,14 +309,14 @@ td img{
   display: flex;
   align-items: center;
 }
-.inventario{
+.aba{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
 }
-.head, .junto{
+.head{
   display: flex;
   align-items: center;
   gap: 6px;
@@ -316,24 +326,58 @@ td img{
   justify-content: center;
 }
 .junto{
-  display: flex;
+  display: contents;
   justify-content: space-around; 
   font-size: 1rem;
-  height: 30px;
-
+  height: 40px;
+  border: 0px;
+  width: 100%;
 }
-.junto, .junto th, .junto td {
-  border: 0px solid red;
-
+.lado .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.junto .th, .junto td:not(.espaco){
+
+.lado .info p{
+  margin: -5px;
+}
+.junto .tr, .junto td:not(.espaco){
   text-align: center;
   background-color: #212e4e;
+  height: 60px;
+  width: 150px;
+  border: none;
+  border-radius: 20px;
 }
 .espaco{
-  width: 40%;
+  width: 60px;
 }
-.inventario img{
+.head img{
   transform: rotate(45deg);
   transform-origin: center;
+}
+.check{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #212e4e;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.check:checked{
+  background-color: #364775;
+}
+.aba{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.aba.ativa{
+  display: flex;
 }
