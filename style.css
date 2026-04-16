@@ -160,6 +160,7 @@ header{
 }
 .info.vida, .info.hp{
   margin-top: 10%;
+  
 }
 .barra_vida, .barra_hp{
   width: 100%;
@@ -171,12 +172,60 @@ header{
   text-align: center;
 }
 .barra_vida{
-  background-color: #990101;
-  border: 2px solid rgb(80, 0, 0);
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(80, 0, 0);
+    background-color: #3b0000;
+    overflow: hidden;
+}
+.vida_cor{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #990101;
+    transition: width 0.2s;
 }
 .barra_hp{
-  background-color: #314575;
-  border: 2px solid #182235;
+    background-color: #314575;
+    border: 2px solid #182235;
+}
+.vida{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vida_valor{
+    display: flex;
+    gap: 4px;
+    color: white;
+    font-weight: bold;
+}
+.dim_vida, .aum_vida{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.dim_vida{
+    left: 10px;
+}
+.aum_vida{
+    right: 10px;
+}
+.vida button:active{
+    background-color: #790000;
 }
 .statics{
   display: flex;
@@ -275,13 +324,13 @@ th .info{
 .tabs input{
   display: none;
 }
-button{
+button:not(.aum_vida, .dim_vida){
   width: 100%;
   height: 100%;
   border: none;
   color: white;
 }
-button:not(.button_aba3){
+button:not(.button_aba3, .aum_vida, .dim_vida){
   background-color: #091929;
 }
 .button_aba3{
