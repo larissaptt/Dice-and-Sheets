@@ -430,3 +430,27 @@ td img{
 .aba.ativa{
   display: flex;
 }
+#resultado_dado{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background-color: #314575;
+  color: white;
+
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 4px solid #182235;
+
+  font-size: 14px;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition: 0.3s;
+}
+
+#resultado_dado.mostrar{
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -38,6 +38,16 @@ atualizarBarra();
 function rolarD20(){
     return Math.floor(Math.random() * 20) + 1;
 }
+function mostrarResultado(texto){
+
+    const caixa = document.getElementById("resultado_dado");
+    const textoResultado = document.getElementById("texto_resultado");
+
+    textoResultado.textContent = texto;
+
+    caixa.classList.add("mostrar");
+
+}
 const mods = document.querySelectorAll(".abil_mod_car, .save_throw_car,.save_throw_sab, .abil_mod_sab, .save_throw_int, .abil_mod_int, .save_throw_const, .abil_mod_const, .save_throw_dex, .abil_mod_dex, .save_throw_forca, .abil_mod_forca");
 
 mods.forEach(mod => {
@@ -50,7 +60,7 @@ mods.forEach(mod => {
 
         let total = d20 + modificador;
 
-        alert(`d20: ${d20}  Modificador: ${modificador}  Total: ${total}`);
+        mostrarResultado(`d20: ${d20} | Mod: ${modificador} | Total: ${total}`);
 
     });
 
