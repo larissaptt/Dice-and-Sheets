@@ -38,15 +38,16 @@ atualizarBarra();
 function rolarD20(){
     return Math.floor(Math.random() * 20) + 1;
 }
-function mostrarResultado(texto){
+function mostrarResultado(nome, texto){
 
     const caixa = document.getElementById("resultado_dado");
-    const textoResultado = document.getElementById("texto_resultado");
+    const titulo = document.getElementById("titulo_resultado");
+    const conteudo = document.getElementById("texto_resultado");
 
-    textoResultado.textContent = texto;
+    titulo.textContent = nome;
+    conteudo.textContent = texto;
 
     caixa.classList.add("mostrar");
-
 }
 const mods = document.querySelectorAll(".abil_mod_car, .save_throw_car,.save_throw_sab, .abil_mod_sab, .save_throw_int, .abil_mod_int, .save_throw_const, .abil_mod_const, .save_throw_dex, .abil_mod_dex, .save_throw_forca, .abil_mod_forca");
 
@@ -54,13 +55,20 @@ mods.forEach(mod => {
 
     mod.closest("button").addEventListener("click", () => {
 
+        let linha = mod.closest("tr, .elemento");
+
         let d20 = rolarD20();
 
         let modificador = Number(mod.textContent);
 
+        let nome = linha.querySelector(".atributos .info")?.textContent;
+
         let total = d20 + modificador;
 
-        mostrarResultado(`d20: ${d20} | Mod: ${modificador} | Total: ${total}`);
+        mostrarResultado(
+            nome,
+            `d20: ${d20} | Mod: ${modificador} | Total: ${total}`
+        );
 
     });
 
@@ -74,6 +82,7 @@ botoes.forEach(botao => {
         let linha = botao.closest("tr");
 
         let modificadorTexto = linha.querySelector("td p").textContent;
+        let nome =linha.querySelector("td .nome_skill").textContent;
 
         let modificador = Number(modificadorTexto);
 
@@ -81,7 +90,10 @@ botoes.forEach(botao => {
 
         let total = d20 + modificador;
 
-        alert(`d20: ${d20} | Mod: ${modificador} | Total: ${total}`);
+        mostrarResultado(
+            nome,
+            `d20: ${d20} | Mod: ${modificador} | Total: ${total}`
+        );
 
     });
 

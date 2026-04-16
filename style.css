@@ -442,15 +442,24 @@ td img{
   border-radius: 8px;
   border: 4px solid #182235;
 
-  font-size: 14px;
-
   opacity: 0;
   transform: translateY(20px);
 
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 #resultado_dado.mostrar{
   opacity: 1;
   transform: translateY(0);
+}
+
+#titulo_resultado{
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 4px 0;
+}
+
+#texto_resultado{
+  margin: 0;
+  font-size: 14px;
 }
