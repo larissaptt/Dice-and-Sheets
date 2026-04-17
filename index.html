@@ -506,82 +506,114 @@
         </div>
     </div>
     <div class="aba3">
-        <div class="titulo">
-            <div class="cabecalho">
-                <button class="button_aba3" onclick="trocarAba('inventario')">Inventário</button>
-                <button class="button_aba3" onclick="trocarAba('feiticos')">Feitiços</button>
-                <button class="button_aba3" onclick="trocarAba('habilidades')">Habilidades</button>
-            </div>
+
+    <div class="titulo">
+        <div class="cabecalho">
+            <button class="button_aba3" onclick="trocarAba('inventario')">Inventário</button>
+            <button class="button_aba3" onclick="trocarAba('feiticos')">Feitiços</button>
+            <button class="button_aba3" onclick="trocarAba('habilidades')">Habilidades</button>
         </div>
-        <div id="inventario" class="aba">
-            <div class="head">
-                <img src="imagens/quadrado.png" alt="">
-                <h1>Inventário</h1>
-                <img src="imagens/quadrado.png" alt="">
-            </div>
-            <table class="junto">
+    </div>
+
+    <div id="inventario" class="aba">
+
+        <div class="head">
+            <img src="imagens/quadrado.png">
+            <h1>Inventário</h1>
+            <img src="imagens/quadrado.png">
+        </div>
+
+        <table class="junto">
+            <tr>
+                <td class="lado">
+                    <div class="info">
+                        <p>Capacidade de peso</p><br>
+                        <p>225lbs</p>
+                    </div>
+                </td>
+
+                <td class="espaco"></td>
+
+                <td class="lado">
+                    <div class="info">
+                        <p>Carregando</p><br>
+                        <p>19lbs</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="inv_carregando">
+
+            <table style="width:100%">
+
                 <tr>
-                    <td class="lado">
-                        <div class="info">
-                            <p>Capacidade de peso</p><br>
-                            <p>225lbs</p>
-                        </div>
+                    <td style="width:20%">
+                        <div class="info">Equipar</div>
                     </td>
-                    
-                    <td class="espaco"></td>
-                    
-                    <td class="lado">
-                        <div class="info">
-                            <p>Carregando</p><br>
-                            <p>19lbs</p>
-                        </div>
+
+                    <td style="width:60%">
+                        <div class="info">Nome</div>
+                    </td>
+
+                    <td style="width:20%">
+                        <div class="info">Qnt</div>
                     </td>
                 </tr>
+                <tr>
+                    <div class="add_aqui"></div>
+                </tr>
+                <tr class="linha_add">
+                    <td colspan="3">
+                        <button class="adicionar_inv">+</button>
+                    </td>
+                </tr>
+                
+
             </table>
-            <div class="inv_carregando">
-                <table style="width: 100%;">
-                    <tr>
-                        <td style="width: 20%;">
-                            <div class="info">
-                                Equipar
-                            </div>
-                        </td>
-                        <td class="" style="width: 60%;">  
-                            <div class="info">
-                                Nome
-                            </div>
-                        </td>
-                        <td style="width: 20%;">
-                            <div class="info">
-                                Qnt
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="info">
-                                <input type="checkbox" class="check">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info">
-                                <button>Ouro</button>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info">
-                                139
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+
         </div>
+        <div id="popup_armas" class="popup">
+
+            <div class="popup_conteudo">
+
+                <button id="fechar_popup">X</button>
+
+                <h2>Adicionar item</h2>
+
+                <div id="lista_armas"></div>
+
+                <div id="detalhes_arma"></div>
+
+            </div>
+
+        </div>
+
+</div>
     </div>
     <div id="resultado_dado">
-        <p id="titulo_resultado"></p>
-        <p id="texto_resultado"></p>
+        <div class="dado">
+            <button id="fechar_resultado">x</button>
+        </div>
+
+        <div class="resultado_container">
+
+        <div>
+            <p id="titulo_resultado"></p>
+            <p id="texto_resultado"></p>
+        </div>
+
+        <div id="numero_total"></div>
+
     </div>
-    <script src="script.js"></script>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/abas.js"></script>
+    <script src="js/vida.js"></script>
+    <script src="js/dados.js"></script>
+    <script src="js/inventario.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

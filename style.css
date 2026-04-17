@@ -324,6 +324,9 @@ th .info{
 .tabs input{
   display: none;
 }
+button{
+  cursor: pointer;
+}
 button:not(.aum_vida, .dim_vida){
   width: 100%;
   height: 100%;
@@ -435,16 +438,18 @@ td img{
   bottom: 20px;
   right: 20px;
 
-  background-color: #314575;
+  background-color: #091929;
   color: white;
 
-  padding: 12px 18px;
-  border-radius: 8px;
-  border: 4px solid #182235;
+  width: 210px;
+
+  padding: 40px 24px 18px 24px;
+
+  border-radius: 10px;
+  border: 3px solid #314575;
 
   opacity: 0;
   transform: translateY(20px);
-
   transition: 0.4s;
 }
 
@@ -453,13 +458,78 @@ td img{
   transform: translateY(0);
 }
 
+.resultado_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#numero_total{
+  font-size: 40px;
+  font-weight: bold;
+}
+
 #titulo_resultado{
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 0 4px 0;
 }
 
 #texto_resultado{
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
+}
+
+/* botão fechar */
+
+.dado{
+  position: absolute;
+  top: 6px;
+  left: 10px;
+
+
+}
+#fechar_resultado{
+  cursor:pointer;
+    background: none;
+  border: none;
+  color: white;
+
+  font-size: 20px;
+}
+.popup{
+    position: fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background: rgba(0,0,0,0.6);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index: 9999;
+}
+
+.popup_conteudo{
+
+    background:#1f2a44;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    width:400px;
+    max-height:500px;
+
+    overflow-y:auto;
+}
+
+#lista_armas button{
+
+    width:100%;
 }
