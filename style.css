@@ -363,7 +363,7 @@ td img{
   flex-wrap: wrap;
   width: 100%;
 }
-.head{
+.head, .hab_raca, .hab_classe, .hab_back{
   display:flex;
   justify-content:center;
   align-items:center;
@@ -418,7 +418,7 @@ td img{
   background-color: transparent;
 }
 
-.head img{
+.container img, .head img{
   transform:rotate(45deg);
   transform-origin:center;
 }
@@ -545,4 +545,17 @@ td img{
 #lista_armas button{
 
     width:100%;
+}
+.separador {
+  border: none;
+  width: 95%;
+  height: 1px;
+  background: #ccc;
+  margin-top: -10px;
+  margin-bottom: 3px;
+}
+.container{
+  display:flex;
+  flex-direction:column;
+  width: 100%;
 }
