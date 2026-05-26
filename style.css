@@ -373,7 +373,8 @@ td img{
 .junto{
   width:100%;
   font-size:1rem;
-  border:0;
+  border-collapse: separate;
+  border-spacing: 5px 2px;
 }
 
 .lado .info{
@@ -387,22 +388,16 @@ td img{
   margin:-5px;
 }
 
-.junto{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0 4px; /* controla distância vertical */
-}
-
-.junto td{
+.junto td:not(.espaco){
   text-align:center;
   background-color:#212e4e;
-  width:150px;
+  width:130px;
   border-radius:20px;
   overflow:hidden;
 }
 
 .junto tbody td{
-  height:60px;
+  height:50px;
 }
 
 /* cabeçalho */
@@ -420,6 +415,7 @@ td img{
 
 .espaco{
   width:60px;
+  background-color: transparent;
 }
 
 .head img{
