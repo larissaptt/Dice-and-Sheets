@@ -559,3 +559,68 @@ td img{
   flex-direction:column;
   width: 100%;
 }
+.habilidades {
+  width: 100%;
+}
+
+.accordion_box {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border 0.3s ease;
+}
+
+.accordion_box.active {
+  border: 2px solid #314575;
+}
+
+.accordion {
+  width: 100%;
+  padding: 15px;
+  background: #212e4e;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion::after {
+  content: ">";
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.accordion.active::after {
+  transform: rotate(90deg);
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #314575;
+  transition: max-height 0.3s ease-out;
+  padding: 0 15px;
+}
+
+.panel p {
+  margin: 15px 0;
+}
+.popup_content {
+  background: #151d33;
+  padding: 20px;
+  width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.fechar {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}

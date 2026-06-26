@@ -623,91 +623,7 @@
                         <th style="width: 40%;">Tipo</th>
                     </tr>
                 </thead>
-                <tr class="truque">
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="truque">
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="truque">
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="truque">
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="truque">
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="truque">
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="truque">
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                
+                <tbody id="lista_truques"></tbody>
             </table>
             
             <table>
@@ -743,62 +659,12 @@
                         </div>
                     </td>
                 </tr>
-                <tr class="feit">
-                    <td>
-                        <div class="info">
-                            <input type="checkbox" class="check">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="feit">
-                    <td>
-                        <div class="info">
-                            <input type="checkbox" class="check">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="feit">
-                    <td>
-                        <div class="info">
-                            <input type="checkbox" class="check">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="nome_truque">Spray de ácido</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="info">
-                            <p class="tipo_truque">Conjuração (V,S)</p>
-                        </div>
-                    </td>
-                </tr>
+                
             </table>
             <table>
                 <tr class="linha_add">
                     <td colspan="3">
-                        <button class="adicionar_inv">+</button>
+                        <button class="adicionar_feit">+</button>
                     </td>
                 </tr>
             </table>            
@@ -822,20 +688,26 @@
                 <hr class="separador">
                 <div class="habilidades">
 
-                    <button class="accordion">Concerto Mágico</button>
-                    <div class="panel">
-                        <p>Descrição do concerto mágico.</p>
+                    <div class="accordion_box">
+                        <button class="accordion">Concerto Mágico</button>
+                        <div class="panel">
+                            <p>Descrição do concerto mágico.</p>
+                        </div>
                     </div>
-                
-                    <button class="accordion">Lançando Feitiços</button>
-                    <div class="panel">
-                        <p>Descrição dos feitiços.</p>
+                    
+                    <div class="accordion_box">
+                        <button class="accordion">Lançando Feitiços</button>
+                        <div class="panel">
+                            <p>Descrição dos feitiços.</p>
+                        </div>
                     </div>
-                
-                    <button class="accordion">Equipamento</button>
-                    <div class="panel">
-                        <p>Descrição do equipamento.</p>
-                    </div>
+                    
+                    <div class="accordion_box">
+                        <button class="accordion">Equipamento</button>
+                        <div class="panel">
+                            <p>Descrição do equipamento.</p>
+                        </div>
+                    </div> 
                 
                 </div>
                 
@@ -853,6 +725,26 @@
                     <img src="imagens/quadrado.png">
                 </div>
                 <hr class="separador">
+                <div class="accordion_box">
+                    <button class="accordion">Concerto Mágico</button>
+                    <div class="panel">
+                        <p>Descrição do concerto mágico.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion_box">
+                    <button class="accordion">Lançando Feitiços</button>
+                    <div class="panel">
+                        <p>Descrição dos feitiços.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion_box">
+                    <button class="accordion">Equipamento</button>
+                    <div class="panel">
+                        <p>Descrição do equipamento.</p>
+                    </div>
+                </div> 
                 <table>
                     <tr class="linha_add">
                         <td colspan="3">
@@ -866,6 +758,26 @@
                     <img src="imagens/quadrado.png">
                 </div>
                 <hr class="separador">
+                <div class="accordion_box">
+                    <button class="accordion">Concerto Mágico</button>
+                    <div class="panel">
+                        <p>Descrição do concerto mágico.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion_box">
+                    <button class="accordion">Lançando Feitiços</button>
+                    <div class="panel">
+                        <p>Descrição dos feitiços.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion_box">
+                    <button class="accordion">Equipamento</button>
+                    <div class="panel">
+                        <p>Descrição do equipamento.</p>
+                    </div>
+                </div> 
                 <table>
                     <tr class="linha_add">
                         <td colspan="3">
@@ -895,6 +807,20 @@
             </div>
         
         </div>
+        <div id="popup_truque" class="popup">
+            <div class="popup_content">
+                <span class="fechar" onclick="fecharPopup()">×</span>
+        
+                <h2 id="popup_nome"></h2>
+                <p><strong>Tipo:</strong> <span id="popup_tipo"></span></p>
+                <p><strong>Tempo:</strong> <span id="popup_tempo"></span></p>
+                <p><strong>Alcance:</strong> <span id="popup_alcance"></span></p>
+                <p><strong>Componentes:</strong> <span id="popup_componentes"></span></p>
+                <p><strong>Duração:</strong> <span id="popup_duracao"></span></p>
+                <p><strong>Descrição:</strong></p>
+                <p id="popup_descricao"></p>
+            </div>
+        </div>
     <div id="resultado_dado">
         <div class="dado">
             <button id="fechar_resultado">x</button>
@@ -919,5 +845,7 @@
     <script src="js/dados.js"></script>
     <script src="js/inventario.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/habilidade.js"></script>
+    <script src="js/truques.js"></script>
 </body>
 </html>
